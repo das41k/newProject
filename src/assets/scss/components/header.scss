@@ -10,6 +10,9 @@
         @include tablet {
             gap: 60px;
         }
+        @include small-mobile {
+            gap: 20px;
+        }
     }
     &__logo {
         & svg {

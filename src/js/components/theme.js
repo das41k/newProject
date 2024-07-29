@@ -1,10 +1,21 @@
 export const useTheme = () => {
-    const switcher = document.querySelector('.switcher');
-    switcher.addEventListener('click', () => {
-        if (document.body.getAttribute('data-theme') == 'dark') {
-            document.body.setAttribute('data-theme', 'light');
-        } else {
-            document.body.setAttribute('data-theme', 'dark');
+    const themeTarget = document.querySelector('[data-theme]');
+    const themeSwitcher = document.querySelector('[data-theme-switcher]')
+    const themeTargetDataset = themeTarget.dataset;
+    const theme = localStorage.getItem('theme') || 'light';
+    themeTargetDataset.theme = theme;
+    if (theme == "dark") {
+        themeSwitcher.checked = true;
+    }
+    themeSwitcher.addEventListener('click', () => {
+        const ThemeDataset = themeTarget.dataset;
+        if (ThemeDataset.theme == "dark") {
+            ThemeDataset.theme = "light";
+            localStorage.setItem('theme','light');
+        }
+        else {
+            ThemeDataset.theme = "dark";
+            localStorage.setItem('theme','dark');
         }
     })
 }
