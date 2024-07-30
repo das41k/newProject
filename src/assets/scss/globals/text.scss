@@ -108,9 +108,8 @@
         width: 76px;
         height: 1px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-45px);
-
-        @include small-desktop {
+        transform: translateY(-43px);
+        @include mini-desktop {
           display: none;
         }
       }
@@ -134,6 +133,9 @@
 
     &-default {
       font-size: 16px;
+      @include small-mobile {
+        font-size: 14px;
+      }
     }
 
     &-small {
