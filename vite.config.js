@@ -5,6 +5,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: './src',
+  base: './newProject',
   server: {
     port: 3000,
   },
@@ -15,7 +16,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/index.html',
-        pricing: './src/pricing.html'
+        pricing: './src/pricing.html',
+        contact: './src/contact.html',
       },
     },
   },

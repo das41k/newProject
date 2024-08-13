@@ -1,7 +1,7 @@
-import '/scss/pricing.scss';
+import '/scss/contact.scss';
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
-import { usePriceSwitcher } from './components/pricing/priceSwitcher.js';
+import { usePhone } from './components/contact/phone.js';
 useTheme();
 useBurger();
-usePriceSwitcher();
+usePhone();

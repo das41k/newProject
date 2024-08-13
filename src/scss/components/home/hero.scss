@@ -234,13 +234,13 @@
                 &--green {
                     color: #60d39c;
                     &::before {
-                        background: url(../icon/green-arrow-icon.svg);
+                        background: url(../assets/icon/green-arrow-icon.svg);
                     }
                 }
                 &--red {
                     color: #e35454;
                     &::before {
-                        background: url(../icon/red-arrow-icon.svg);
+                        background: url(../assets/icon/red-arrow-icon.svg);
                     }
                 }
                 &--red::before, &--green::before {

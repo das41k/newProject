@@ -1,0 +1,94 @@
+.get-started {
+    padding: 120px 0px 160px;
+    & .container {
+        padding-right: 0px;
+        margin-right: 0;
+    }
+    & img {
+        width: 570px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+    }
+    &__form {
+        &-wrapper {
+            padding: 56px 48px;
+            border: 1px solid rgb(206, 209, 216);
+            background: rgb(255, 255, 255);
+            width: 608px;
+            height: 784px;
+            position: absolute;
+            top: 0;
+            left: -110px;
+            @include small-desktop {
+                position: inherit;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            line-height: 44px;
+            letter-spacing: -2%;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        &-descr {
+            font-weight: 500;
+            line-height: 30px;
+            margin-bottom: 48px;
+            color: var(--neutral-color-150);
+            & a {
+                color: var(--primary-color-30);
+            }
+        }
+        &-top {
+            @include flex-all-between;
+            gap: 32px;
+        }
+        &-label {
+            @include flex-column;
+            margin-bottom: 24px;
+            &-text {
+                font-weight: 500;
+                line-height: 20px;
+                color: rgb(29, 30, 37);
+            }
+        }
+        &-input {
+            border: 1px solid rgb(237, 237, 237);
+            border-radius: 8px;
+            background: #fff;
+            padding: 10px 14px;
+            width: 100%;
+            margin-bottom: 24px;
+            &::placeholder {
+                color: var(--neutral-color-150);
+            }
+            &--small {
+                width: 240px;
+                margin-bottom: 0px;
+            }
+        }
+        &-textaria {
+            width: 100%;
+            height: 134px;
+            padding: 10px 14px;
+            border: 1px solid rgb(237, 237, 237);
+            border-radius: 8px;
+            /* Neutral/10 */
+            background: rgb(255, 255, 255);
+            margin-bottom: 32px;
+            outline: none;
+            resize: none;
+        }
+        &-button {
+            color: rgb(255, 255, 255);
+            padding: 16px 32px;
+            background-color: rgb(29, 30, 37);
+        }
+    }
+}
+.iti__country-name {
+    color: #000;
+}

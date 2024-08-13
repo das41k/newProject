@@ -1,0 +1,95 @@
+.faq {
+    padding: 82px 0px 160px;
+    @include mobile {
+        padding: 40px 0px 30px;
+    }
+    &__head {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    &__title {
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 24px;
+    }
+    &__descr {
+        font-weight: 500;
+        line-height: 32px;
+        color: var(--neutral-color-150);
+    }
+
+    &__accordion {
+        text-align: left;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgb(237, 237, 237);
+        margin-bottom: 56px;
+        // .faq__accordion-control
+        &-control {
+            @include flex-all-between;
+            gap: 10px;
+            cursor: pointer;
+            list-style: none;
+            &::-webkit-detalis-marker {
+                display: none;
+            }
+        }
+
+        // .faq__accordion-title
+
+        &-title {
+            font-weight: 600;
+            line-height: 150%;
+        }
+
+        // .faq__accordion-icon
+        &-icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            &::before, &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                border-radius: 6px;
+                background-color: var(--neutral-color-100);
+                width: 17px;
+                height: 3px;
+            }
+            &::after {
+                transform: rotate(90deg);
+                transition: all var(--transition);
+            }
+        }
+        &[open] &-icon {
+            &::after {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        // .faq__accordion-content
+
+        &-content {
+            margin-top: 16px;
+            max-width: 641px;
+            opacity: 0;
+            max-height: 0;
+            transition: opacity 3s, max-height 3s;
+        }
+        &[open] &-content {
+            opacity: 1;
+            max-height: 1000px;
+            transition: opacity 3s, max-height 3s; // Установите значение, которое будет достаточно большим для вашего контента
+        }
+
+        // .faq__accordion-text
+
+        &-text {
+            color: var(--neutral-color-150);
+            font-weight: 500;
+            line-height: 32px;
+        }
+    }
+}
